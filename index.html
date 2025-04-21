@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8" />
-    <title>SmartRPD Web Viewer</title>
+    <title>SmartRPD Lite Web</title>
     <link rel="stylesheet" href="css/style.css" />
     <style>
       /* Default styles for the loading bar */
@@ -76,7 +76,7 @@
   </head>
   <body>
     <header>
-      <h1>SmartRPD Web Viewer</h1>
+      <h1>SmartRPD Lite Web</h1>
     </header>
     <main>
       <div id="container3D"></div>
@@ -98,7 +98,26 @@
       window.addEventListener('orientationchange', checkOrientation);
     </script>-->
     <!--<script src="./script.js"></script>-->
-<!--     <script type="module" src="./src/index.js"></script> -->
-    <script type="module" src="./bundle.js"></script>
+    <!-- Chat Widget -->
+    <!-- Chat Widget -->
+    <div id="chat-widget">
+      <div id="chat-box">
+        <!-- Messages will appear here -->
+      </div>
+      <div id="chat-input-area">
+        <input type="file" id="imageInput" accept="image/*" hidden />
+        <button id="uploadBtn">+</button>
+        <input type="text" id="textInput" placeholder="Type a comment..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+    <div class="image-modal" id="imageModal">
+      <img id="modalImage" src="" alt="Zoomed" />
+    </div>
+    
+
+    <script type="module" src="./src/index.js"></script>
+    <script type="module" src="./src/chat.js"></script>
+    <script type="module" src="./dist/bundle.js"></script>
   </body>
 </html>
